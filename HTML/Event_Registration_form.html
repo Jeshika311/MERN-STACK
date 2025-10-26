@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <form>
+    <h1>Event Registration</h1>
+    <br/>
+    <label for = "name">Name : </label> <br/>
+    <input type = "text" id = "name" placeholder="Enter name"> <br/> <br/>
+
+    <label for = "email">Email : </label> <br/>
+    <input type = "text" id = "email" placeholder="Enter Email"> <br/> <br/>
+
+    <label for = "Phone number">Phone : </label> <br/>
+    <input type = "tel" id = "Phone number" placeholder="Enter Phone number"> <br/> <br/>
+
+    <label for = "occupation">Occupation : </label> <br/>
+    <select name = "occupations" id = "occupation">
+        <option value = "student">Student</option>
+        <option value = "professional">Professional</option>
+        <option value = "other">other</option>    
+        </select>
+        <br/> <br/>
+
+    <fieldset>
+
+    <legend>Topics of interest</legend>
+
+    <label for = "html">HTML</label>
+    <input type = "checkbox" name = "html" id = "html"> <br/>
+
+    <label for = "css">CSS</label>
+    <input type = "checkbox" name = "css" id = "css"> <br/>
+
+    <label for = "javascript">JavaScript</label>
+    <input type = "checkbox" name = "javascript" id = "javascript"> <br/>
+
+    </fieldset>
+    
+    <label for = "textarea1">Comments</label> <br/>
+    <textarea name = "textarea1" id = "textarea1" cols="30" rows="10"> </textarea> <br/>
+
+    <input type = "submit" value="Register">
+    </form>
+</body>
+</html>
