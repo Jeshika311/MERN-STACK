@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135DEG, #8BC6EC 0%, #9599E2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 360px;
+    height: 570px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.card img{
+    width: 100%;
+    height: 30%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.textbox{
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 80%;
+    text-align: center;
+}
+
+.card h2{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#amountBox{
+    width: 80%;
+    height: 10%;
+    background-color: #8BC6EC;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#payment{
+    width: 80%;
+    height: 9%;
+    background-color: rgb(19, 19, 92);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.cancelBox a{
+    text-decoration: none;
+    color: rgb(114, 111, 111);
+    font-weight: bold;
+}
