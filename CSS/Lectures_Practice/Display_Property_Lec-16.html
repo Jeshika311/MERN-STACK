@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* div{
+            border : 1px solid red;
+            width : 300px;
+            height : 30px;
+            margin : 25px;
+        } */
+
+        *{
+            margin : 10px;
+            padding : 0px;
+            box-sizing: border-box;     /*Box size remain same , content shrink*/
+
+        }
+
+        .box{
+            width : 300px;
+            height : 300px;
+            border : 1px solid black;
+            padding : 100px;
+            margin : 10px;
+        }
+
+        span{
+            border : 2px solid green;     /*show content of both span tag in one line = this is inline property*/
+            width : 200px; 
+            height : 40px;    /*Does not apply custom margins*/
+            margin : 10px;     /*Only chances show in horizontal*/
+            padding : 15px;
+            /* display: block;    Convert inline to block */
+            display: inline-block;   /*Mixture of both  = show both span box in one line with given custom margins*/
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- <div>
+        Welcome to CodeHelp
+    </div>
+
+    <div>
+        Welcome to CodeHelp 2.0
+    </div> -->
+
+    <!-- <div class = "box">
+        Welcome to CodeHelp
+    </div> -->
+
+    <span>
+        This is a banana.
+    </span>
+
+    <span>
+        It is a fruit.
+    </span>
+</body>
+
+</html>
