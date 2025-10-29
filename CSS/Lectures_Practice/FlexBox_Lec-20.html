@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container{
+            background-color: beige;
+            margin : 2px;
+            padding : 2px;
+            border: 5px;
+            height: 1500px;
+            display: flex;   /* by default row, so all 4 boxes places in a single row */
+            flex-direction: column;    /* change row -> column */
+            /* flex-wrap: nowrap;        squezze but do not go in 2nd line */
+            /* flex-wrap: wrap;         go in next line but do not squezze */
+            /* justify-content: center;     /* Justify position and space between 2 boxes */
+            /* align-items: center; */
+            align-content: start;
+
+        }
+
+        .box{
+            height: 200px;
+            width: 200px;
+            margin : 2px;
+            padding : 2px;
+        }
+
+        #box1{
+            background-color: aqua;
+            border: 1px solid black;
+            order: 5;   /* goes last of all boxes */
+            flex-shrink: 4;    /* shrink 4x times faster than other boxes */
+            /* flex-grow: 5;     /* grows or expand 5x faster han other boxes */
+            flex-basis: 400px;    /* used to set dimension */
+            align-self: center;
+        }
+
+        #box2{
+            background-color: blue;
+            border: 1px solid black;
+            }
+
+        #box3{
+            background-color: orange;
+            border: 1px solid black;
+        }
+
+        #box4{
+            background-color: brown;
+            border: 1px solid black;
+            order: -1;    /* goes in starting of all boxes */
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box" id = "box1">Box1</div>
+        <div class="box" id = "box2">Box2</div>
+        <div class="box" id = "box3">Box3</div>
+        <div class="box" id = "box4">Box4</div>
+    </div>
+
+</body>
+</html>
