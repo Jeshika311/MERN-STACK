@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box{
+            background-color: rgb(220, 235, 120);
+            border : 2px solid red;
+            width: 50vw;      /* 50% width of viewboard */
+            height : 10vh;   /* 10% height of viewboard */
+        }
+
+        .box1{
+            border : 1px solid black;
+            font-size: 100px;
+        }
+
+        .firstpara{
+            border: 1px solid black;
+            font-size: 5rem;       /* depend on root element which is 16px , so 5x16 = 80px */
+        }
+
+        .container{
+            font-size: 10px;
+        }
+
+        .box2{
+            font-size: 10em;     /* 1 em = pixel value of container */     /* 10em = 10x10 = 100px */
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class = "box">
+        Welcome to CodHelp
+    </div>
+
+    <div class="box1">
+        Jeshika sharma
+    </div>
+
+    <p>Hello world, this is font size of 10px</p>
+
+    <div class="container">
+        <div class="box2">
+            Welcome to my home.
+        </div>
+    </div>
+
+    <p  class="firstpara">Hello duniya</p>
+
+</body>
+</html>
+
+<!-- physical pixel vs logical pixel -->
+ <!-- physical pixel = 1/96 inch -->
