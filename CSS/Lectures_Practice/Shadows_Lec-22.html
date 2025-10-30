@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        :root{
+            --primary-color: beige;
+            --custom-width: 330px;
+        }
+
+        .container{
+            background-color: var(--primary-color);     /* we can create custom variables so if we want to chng name of color so we can chng it in only 1 step */
+            height: 650px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            background-color: aquamarine;
+            width: 330px;
+            height: 330px;
+            border: 1px solid brown;
+            margin: 5px;
+            padding: 5px;
+            box-shadow: 10px 15px 5px 10px brown;   /* add shadow */  /* here 5px is used for blurr radius */   /* here 10px is used for spread radius */
+            /* box-shadow: inset 10px 15px brown;      for inner shadow inset is used */
+            /* box-shadow: 10px 15px brown, 5px 8px red;     /* we can also use multiple shadows */
+        }
+
+        img{
+            height: 100px;
+            width: 100px;
+        }
+
+        #head1{
+            text-shadow: 3px 3px white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src = "jeshika1.jpg" />
+            <h2 id = "head1">Welcome to CodeHelp</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum atque cupiditate nisi doloribus debitis voluptatibus explicabo. 
+                Rem, nam culpa excepturi eligendi fuga ipsa neque nobis ratione praesentium nesciunt porro earum maiores quasi iste quaerat autem expedita ea soluta! 
+                Facilis sit porro nulla quod sapiente expedita. Sint tempore illum rerum facere.</p>
+        </div>
+    </div>
+</body>
+</html>
