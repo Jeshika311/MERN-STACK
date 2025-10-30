@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            height: 400px;
+            width: 400px;
+            background-color: beige;
+            border: 1px solid black;
+            transition-property: all;
+            transition-duration: 4s;
+            transition-delay: 1s;
+            transition-timing-function: linear;
+
+            /* transition: all 4s linear 1s;     short hand notation */
+        }
+
+        .box:hover{      /* pseudo classes */
+            width: 1299px;
+            height: 900px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+
+    </div>
+</body>
+</html>
