@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Transforms</title>
+
+    <style>
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color: beige;
+            border: 2px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+
+            transition: all 2s linear 1s;    /* box moves slowly */
+        }
+
+        .box:hover{
+            /* transform: rotate(90deg);    box rotates with 90 degrees */
+            /* transform: scale(2);    box size becomes twice */
+            transform: translate(0px , 500px);
+        }
+
+        p{
+            font-size: 36px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <p>This is CodeHelp's box</p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
