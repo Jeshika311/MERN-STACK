@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Design</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100%;
+        }
+
+        .container{
+            width: 100%;
+            height: 100%;
+            padding: 4rem;
+            display: grid;
+            gap: 1rem;
+            background-color: rgb(71,65,65);
+            /* grid-template-columns: repeat(auto-fit,minmax(200px , 500px));  automatically adjust no of rows and column when we increase or decrease size */
+
+            grid-template-areas: 
+                "Header Header Header"
+                "Sidebar Content1 Content1"
+                "Sidebar Content2 Content3"
+                "Footer Footer Footer"
+            ;
+        }
+
+        .items{
+            padding: 1rem;
+            border: 3px solid black;
+            background-color: rgb(85,85,208);
+            color: white;
+        }
+
+        #Header{
+            grid-area: Header;
+        }
+
+        #Sidebar{
+            grid-area: Sidebar;
+        }
+
+        #Content1{
+            grid-area: Content1;
+        }
+
+        #Content2{
+            grid-area: Content2;
+        }
+
+        #Content3{
+            grid-area: Content3;
+        }
+
+        #Footer{
+            grid-area: Footer;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="items" id="Header">Header</div>
+        <div class="items" id="Sidebar">Sidebar</div>
+        <div class="items" id="Content1">Content1</div>
+        <div class="items" id="Content2">Content2</div>
+        <div class="items" id="Content3">Content3</div>
+        <div class="items" id="Footer">Footer</div>
+        <!-- <div class="items">G</div>
+        <div class="items">H</div>
+        <div class="items">I</div>
+        <div class="items">J</div>
+        <div class="items">K</div>
+        <div class="items">L</div>
+        <div class="items">M</div>
+        <div class="items">N</div>
+        <div class="items">O</div>
+        <div class="items">P</div> -->
+    </div>
+    
+</body>
+</html>
