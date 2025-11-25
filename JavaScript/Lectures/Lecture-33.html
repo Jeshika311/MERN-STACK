@@ -1,0 +1,63 @@
+<!-- How to create a new element in DOM -->
+<!-- Relations -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style = "background-color: #212121; color: #fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1]);    /* to access any variable  */
+    console.log(parent.children[1].innerHTML);
+
+    /* to print all elements */
+    for(let i=0; i< parent.children.length; i++){
+        console.log(parent.children[i].innerHTML);
+    }
+
+    parent.children[1].style.color = "orange"
+    console.log(parent.firstElementChild);     /* give 1st element */
+    console.log(parent.lastElementChild);      /* give last element */
+
+    // go to parent element with the help of OneElement
+
+    const dayOne = document.querySelector('.day')   // give 1st day
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling);
+
+    console.log("NODES: ", parent.childNodes);  // each line break is considered as a node and also each class is considered as node
+
+</script>
+
+<!-- create new element in DOM -->
+
+<script>
+    const div = document.createElement('div')
+    console.log(div)                                  // empty div is created
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+
+    div.setAttribute("title" , "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerHTML = "chai aur code"
+    const addText = document.createTextNode("chai aur code")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+</script>
+</html>
