@@ -1,0 +1,61 @@
+<!-- Edit and remove element in DOM -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove elements in DOM</title>
+</head>
+<body style = "background-color: #212121; color: #fff">
+
+    <ul class = "language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+
+<script>
+
+    // add elements  
+
+    function  addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage("python")
+    addLanguage("typescript")
+
+    function addOptiLanguage(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))       // append child is better approach than ineerHtml
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptiLanguage('golang')
+
+    // edit elements
+
+    const secondlang = document.querySelector("li:nth-child(2)")
+    secondlang.innerHTML = "Mojo"           // innerHTML is not better approach and not optimised way
+    document.querySelector('.language').appendChild(secondlang)
+
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojoo"
+    secondlang.replaceWith(newLi)
+    document.querySelector('.language').appendChild(secondlang)
+
+    // one more method to edit elements
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    // remove elements
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+    
+</script>
+</html>
