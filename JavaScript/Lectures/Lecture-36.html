@@ -1,0 +1,81 @@
+<!-- Events -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style = "background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width = "200px" id = "photo1" src = "Picture1.jpg" alt = "photoshop"></li>
+            <li><img width = "200px" id = "photo2" src = "Picture2.jpg" alt = ""></li>
+            <li><img width = "200px" id = "photo3" src = "Picture3.jpg" alt = "" onclick="alert('Jeshika')"></li>     <!-- not a good approach , 2nd approach is using JS getelementbyid--> 
+            <li><img width = "200px" id = "photo4" src = "Picture4.jpg" alt = "" ></li>
+            <li><img width = "200px" id = "photo5" src = "Picture5.jpg" alt = ""></li>
+            <li><a style = "color: aliceblue" href = "https://google.com" id = "google">Google</li>
+        </ul>
+    </div>
+</body>
+
+<!-- in JavaScript events run in sequencial and it is sequencially run language -->
+<script>
+    document.getElementById('photo3').onclick = function(){           // this is also not a good approach bcz it gives less features
+        alert('photo3 clicked')  
+    }
+
+    // best approach 3rd one
+
+    document.getElementById('photo3').addEventListener('click' , function(){
+        alert("photo3 clicked again")
+    } , false)
+
+    // attachEvent()    used in earlier times
+    // jQuery     in this there was a "on" event listener
+
+    // event object
+
+    document.getElementById('photo2').addEventListener('click' , function(e){
+        console.log(e);
+    })
+
+    // type , timestamp , defaultPrevented
+    // taregt , toElement , srcElement , currentTarget
+    // clientX , clientY , screenX , screenY
+    // altkey , ctrlkry , shiftkey , keyCode
+
+    // Event propagation  -> two context -> event bubbling , event capturing
+    
+    document.getElementById('images').addEventListener('click' , function(e){
+        console.log("Clicked inside the ul");
+    }, false)
+
+    document.getElementById('photo1').addEventListener('click' , function(e){
+        console.log("photo1 clicked");
+        e.stopPropagation()              // stop bubbling
+    }, false)
+
+    // event bubbling -> false -> inside to outside
+    // event capturing -> true -> outside to inside
+
+    document.getElementById('google').addEventListener('click' , function(e){
+        e.preventDefault();                     // change its default behaviour and google will not open
+        e.stopPropagation() 
+        console.log("google clicked")
+    }, false)
+
+
+    // we want that if we click on the image then it becomes vanish
+
+    document.querySelector('#images').addEventListener('click' , function(e){
+        console.log(e.target.parentNode);
+        let removeit = e.target.parentNode;
+        removeit.remove()
+        // removeit.parentNode.removeChild(removeit)
+    }, false)
+
+</script>
+</html>
