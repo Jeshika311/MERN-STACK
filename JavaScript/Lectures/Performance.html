@@ -1,0 +1,76 @@
+<!-- Performance : Reflow && Repaint in Js
+
+Performance Improvement
+
+how to measure performance and efficiency of code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    // code 1    ->   this is slow
+
+    const t1 = performance.now()
+
+    for(let i=1; i<=100; i++){
+        let para = document.createElement('p');
+        para.textContent = "This is Para" + i;
+        document.body.appendChild(para);
+    }
+
+    const t2 = performance.now();
+
+    console.log("Total time by code 1 : " + (t2 - t1));
+
+    // code 2    ->   this is fast 
+
+    const t3 = performance.now();
+
+    let mydiv = document.createElement('div');
+
+    for(let i=1; i<=100; i++){
+        let para = document.createElement('p');
+        para.textContent = "This is para " + i;
+        mydiv.appendChild(para);
+    }
+    document.body.appendChild(mydiv);
+
+    const t4= performance.now();
+    console.log("Total time by code 2 : " + (t4 - t3));
+
+
+    // code 3    ->   best code
+
+    let fragment = document.createDocumentFragment();
+
+    for(let i=1; i<=100; i++){
+        let para = document.createElement('p');
+        para.textContent = "This is para " + i;
+        //No reflow and No repaint for the below line
+        fragment.appendChild(para);
+    }
+
+    // the below line takes 1 reflow and 1 repaint
+    document.body.appendChild(fragment);
+
+
+</script>
+
+</html>
+
+<!-- reflow - > process of calculating a position / dimension that we render on the page. computationally intensive task.  more calculation
+
+repaint - > it is the process of displaying content / element pixel by pixel  and it is faster than reflow -->
+
+<!-- Best practice 
+
+Document fragment -> light weight doc object => when addition then it nor reflow and neither repaint -->
