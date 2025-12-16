@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+}
+
+#warning {
+  color: red;
+  display: none;
+  margin-top: 5px;
+}
+
+textarea {
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+}
