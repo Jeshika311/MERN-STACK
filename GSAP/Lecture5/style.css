@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: aeonik;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://t4.ftcdn.net/jpg/02/16/42/55/360_F_216425570_JVsxUHcKBVbJuTjYxmWqZrxtZxMDdp7n.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 50px;
+    color: #fff;
+}
+#nav h2{
+    font-size: 30px;
+}
+#nav i{
+    font-size: 30px;
+    font-weight: 80px;
+    cursor: pointer;
+}
+#full{
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.544);
+    top: 0;
+    right: -40%;
+    backdrop-filter: blur(10px);
+    padding: 40px 60px;
+}
+#full h4{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#full i{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+}
