@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 6px;
+    z-index: 9;
+}
+#image{
+    height: 30vw;
+    width: 60vw;
+    background-color: red;
+    position: relative;
+}
+#image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#overlay{
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
