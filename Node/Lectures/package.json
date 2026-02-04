@@ -1,0 +1,16 @@
+{
+  "name": "npm-test",
+  "version": "1.0.0",
+  "description": "this project  is being created to learn about npm",
+  "main": "Lecture8.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon Lecture8.js"
+  },
+  "author": "jeshika",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
