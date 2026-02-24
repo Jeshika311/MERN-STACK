@@ -1,0 +1,12 @@
+.opinion_div{
+    background-color: antiquewhite;
+    padding: 25px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1rem;
+    align-content: center;
+}
