@@ -1,0 +1,43 @@
+.pizza-card {
+  width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  padding: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.pizza-details {
+  padding-top: 20px;
+  background: white;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #2ecc71;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.pizza-card:hover .overlay {
+  opacity: 1;
+}
+
+.add-to-cart {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
