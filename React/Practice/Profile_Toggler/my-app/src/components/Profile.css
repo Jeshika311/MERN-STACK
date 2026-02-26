@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.profile-img {
+  width: 150px;
+  height: 170px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+p {
+  margin: 5px 0;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
