@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping to next line on small screens */
+  gap: 20px;       /* space between cards */
+  justify-content: center; /* center cards horizontally */
+  align-items: center;
+  margin-top: 30px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
