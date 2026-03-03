@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+import dotenv from 'dotenv';
+dotenv.config();
 
-mongoose.connect("mongodb+srv://jeshikasharma07:jashan_20@portfolio.otqbyr.mongodb.net/auth?retryWrites=true&w=majority&appName=Portfolio");
+mongoose.connect(process.env.MONGO_URL);
 
 const userSchema = new mongoose.Schema({
     name: String,
