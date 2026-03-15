@@ -1,11 +1,13 @@
 // Core Module
 const path = require('path');
+import dotenv from 'dotenv';
+dotenv.config();
 
 // External Module
 const express = require('express');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
-const DB_PATH = "mongodb+srv://jeshikasharma07:jashan_20@portfolio.otqbyr.mongodb.net/airbnb?retryWrites=true&w=majority&appName=Portfolio"
+const DB_PATH = process.env.MONGO_URL;
 
 //Local Module
 const storeRouter = require("./routes/storeRouter")
