@@ -1,0 +1,10 @@
+<header>
+    <h1 class = "text-red-700 text-center text-5xl italic ">Here are our registered homes : </h1>
+    <ul>
+      <% registeredHomes.forEach(home => { %>
+        <li>
+          <%= home.houseName %>
+        </li>
+      <% }); %>              
+    </ul>
+  </header>
