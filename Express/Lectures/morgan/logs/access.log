@@ -1,0 +1,3 @@
+Time- 11:32:46 am | Method- GET | URL- /users | Status- 304 | Response Length- - | Response Time- 0.803 ms
+Time- 11:55:16 am | Method- GET | URL- / | Status- 304 | Response Length- - | Response Time- 1.360 ms
+Time- 11:55:28 am | Method- GET | URL- /about/ | Status- 304 | Response Length- - | Response Time- 0.649 ms
